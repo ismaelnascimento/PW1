@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Router app</title>
+
+    <!-- CSS link (loading Semantic UI from a CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        const signIn =() => {
+            var userid = window.prompt(`ID do usuário: `);
+            window.location.href = `/users/signin/${userid}`;
+        }
+        const signUp =() => {
+            window.location.href = `/users/signup`;
+        }
+    </script>
+</head>
+
+<body class="container">
+
+    <header>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <ul class="navbar-nav" style="display: flex;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Page initial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users">Users</a>
+                    </li>
+                </ul>
+
+                <div>
+                    <button class="d-flex btn btn-outline" onclick="signIn()">
+                        Sign in
+                    </button>
+                    <button style="color: #fff" class="d-flex btn bg-dark" onclick="signUp()">
+                        Sign up
+                    </button>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
