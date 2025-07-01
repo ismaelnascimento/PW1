@@ -1,0 +1,36 @@
+<%- include('./partials/header'); %>
+
+    <div class="w-full h-screen flex items-center justify-center flex-col gap-12 m-24">
+        <h1 class="font-semibold text-4xl">
+            <%= title %>
+        </h1>
+        <div class="flex">
+            <button class="absolute left-12">
+                <svg class="w-24 h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    color="#FFFFFF" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="#FFFFFF" stroke-width="1.5" />
+                    <path d="M13.5 16C13.5 16 10.5 13.054 10.5 12C10.5 10.9459 13.5 8 13.5 8" stroke="#FFFFFF"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <div class="flex gap-2 overflow-x-auto">
+
+
+                <% data.forEach(function(item) {%>
+                    <img class="w-64 h-64 rounded-xl object-cover" src="<%- item.hdurl %>" alt="<%- title %>" />
+                    <% }); %>
+            </div>
+            <button class="absolute right-12">
+                <svg class="w-24 h-24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                    color="#000000" fill="none">
+                    <circle cx="12" cy="12" r="10" stroke="FFFFFF" stroke-width="1.5"></circle>
+                    <path d="M10.5 8C10.5 8 13.5 10.946 13.5 12C13.5 13.0541 10.5 16 10.5 16" stroke="FFFFFF"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <%- include('./partials/footer'); %>
